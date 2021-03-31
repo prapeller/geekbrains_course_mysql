@@ -45,18 +45,6 @@ CREATE TABLE products (
   KEY index_of_catalog_id (catalog_id)
 ) COMMENT = 'Товарные позиции';
 
-DROP TABLE IF EXISTS products_new;
-CREATE TABLE products_new (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(255) COMMENT 'Название',
-  description TEXT COMMENT 'Описание',
-  price DECIMAL (11,2) COMMENT 'Цена',
-  catalog_id INT UNSIGNED,
-  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  KEY index_of_catalog_id (catalog_id)
-) COMMENT = 'Товарные позиции';
-
 INSERT INTO products
   (name, description, price, catalog_id)
 VALUES

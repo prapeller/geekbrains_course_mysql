@@ -1,0 +1,14 @@
+видеоурок
+https://d2xzmw6cctk25h.cloudfront.net/record/42864/attachment/0151727dd11ea50a08281293893f441e.mp4
+
+Методичка 3. Операторы, фильтрация, сортировка и ограничение
+https://docs.google.com/document/d/1xIihJbSVT76Nu0pa1b1nlhh5nUd4QYQe0Vuh2C4LPJg/edit
+
+Методичка 4. Агрегация данных
+https://docs.google.com/document/d/1TjaJPA-LI8HZKlWTGpRBtNlbnnmCoqzMuh8BGY4aiSk/edit
+
+Презентация. Агрегация данных
+https://d2xzmw6cctk25h.cloudfront.net/asset/1484149/attachment/5146fe6be1a8f77c8ca43e9907cac81e.pptx
+
+Презентация. Операторы, фильтрация, сортировка и ограничение
+https://d2xzmw6cctk25h.cloudfront.net/asset/1484147/attachment/6b0d014733a92aa0cc4631bc59eaaecf.pptx

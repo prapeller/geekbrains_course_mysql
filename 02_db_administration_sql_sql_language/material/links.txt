@@ -1,0 +1,20 @@
+видеоурок
+https://d2xzmw6cctk25h.cloudfront.net/record/42869/attachment/3551d8baf374fd42588e8d72a43f86ae.mp4
+
+1. Добавление пути mysql в системную переменную Path (видео)
+https://www.youtube.com/watch?v=6Tnh9yRFMQw&feature=emb_title
+
+2. Работа с дампами в Windows (видео)
+https://www.youtube.com/watch?v=QDvf1y-gl6Q&feature=emb_title
+
+3. Создание файла my cnf в Windows (видео)
+https://www.youtube.com/watch?v=RJG9pQutWX0&feature=emb_title
+
+Презентация. Урок 1
+https://d2xzmw6cctk25h.cloudfront.net/asset/2401806/attachment/2054c5a45cfda27ccee0b10df064b0f4.pptx
+
+Презентация. Язык запросов SQL
+https://d2xzmw6cctk25h.cloudfront.net/asset/1484111/attachment/35a0f86e9341fa891fe7d64fed36eb8a.pptx
+
+Методичка 2. Язык запросов SQL
+https://docs.google.com/document/d/1Os4W1-eGgSAgF2CXzImHbTkVuaK-zxELLh7FMR83MC0/edit

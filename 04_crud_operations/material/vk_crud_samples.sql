@@ -94,10 +94,10 @@ SELECT distinct id, firstname
 FROM users;
 
 SELECT * FROM users
-WHERE id = 1 
+WHERE id = 1;
 
 SELECT * FROM users
-WHERE id >=2 AND id<15
+WHERE id >=2 AND id<15;
 
 
 SELECT *
