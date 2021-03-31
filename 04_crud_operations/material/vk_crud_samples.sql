@@ -94,10 +94,10 @@ SELECT distinct id, firstname
 FROM users;
 
 SELECT * FROM users
-WHERE id = 1;
+WHERE id = 1 
 
 SELECT * FROM users
-WHERE id >=2 AND id<15;
+WHERE id >=2 AND id<15
 
 
 SELECT *
@@ -125,13 +125,13 @@ WHERE id IN (1,2,30,4);
 
 -- отправка запроса в друзья
 INSERT INTO friend_requests (`initiator_user_id`, `target_user_id`, `status`)
+VALUES ('1', '2', 'requested');
+INSERT INTO friend_requests (`initiator_user_id`, `target_user_id`, `status`)
 VALUES ('1', '3', 'requested');
 INSERT INTO friend_requests (`initiator_user_id`, `target_user_id`, `status`)
-VALUES ('1', '5', 'requested');
+VALUES ('1', '4', 'requested');
 INSERT INTO friend_requests (`initiator_user_id`, `target_user_id`, `status`)
-VALUES ('1', '6', 'requested');
-INSERT INTO friend_requests (`initiator_user_id`, `target_user_id`, `status`)
-VALUES ('1', '7', 'requested');
+VALUES ('1', '5', 'requested'); 
 
 
 ALTER TABLE vk.friend_requests MODIFY COLUMN status enum('requested','approved','declined','unfriended') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT 'requested' NULL;

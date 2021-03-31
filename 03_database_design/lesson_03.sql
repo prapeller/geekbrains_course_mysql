@@ -1,3 +1,5 @@
+# https://gb.ru/lessons/106360/homework
+
 # ddl - data definition language
 # create, alter, drop
 
