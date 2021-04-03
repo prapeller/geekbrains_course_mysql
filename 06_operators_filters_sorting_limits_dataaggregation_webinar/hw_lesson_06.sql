@@ -48,10 +48,3 @@ SELECT (SELECT SUM(women_like) AS total_women_like
               HAVING user_id IN (SELECT user_id AS men_id
                                  FROM profiles
                                  WHERE gender = 'm')) AS likes_per_man)   AS total_men_likes;
-
-# 4. Найти 10 пользователей, которые проявляют наименьшую активность в использовании социальной сети.
-
-
-SELECT user_id, COUNT(*) AS user_in_community_qty FROM users_communities GROUP BY user_id;
-
-SELECT user_id, COUNT(*) AS users_photo_albums_qty FROM photo_albums;
