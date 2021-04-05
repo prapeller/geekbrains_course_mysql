@@ -5,21 +5,74 @@ USE vk;
 #1. Пусть задан некоторый пользователь. Из всех друзей этого пользователя найдите человека, который больше всех общался
 # с нашим пользователем.
 
-# на примере пользователя с id = 33, определим кто ему больше всех написал...
+# на примере пользователя с id = 18, определим кто ему больше всех написал...
+# с 38м дружили до этого, появилась у него парочка друзей после: 37, 16
 
-SELECT from_user_id 'the best friend', COUNT(*) 'messages'
+# INSERT INTO friend_requests (initiator_user_id, target_user_id, status, confirmed_at)
+# VALUES (18, 37, 'approved', NOW()),
+#        (16, 18, 'approved', NOW());
+
+# собрались они на вечеринку ))
+
+# INSERT INTO messages (from_user_id, to_user_id, body)
+# VALUES (18, 38, 'hello'),
+#        (38, 18, 'heeelllloooo'),
+#        (18, 38, 'lets go party!'),
+#        (38, 18, 'ok!'),
+#        (38, 18, 'and please call Mike, you recently met, you are friends recently'),
+#        (18, 38, 'ok!'),
+#        (18, 16, 'lets go party!'),
+#        (18, 38, 'hey, you should also call Mike!'),
+#        (38, 18, 'ok!'),
+#        (38, 16, 'lets go party!');
+
+# 18й и его друзья
+DROP VIEW IF EXISTS 18_and_friends;
+CREATE VIEW 18_and_friends AS
+SELECT initiator_user_id 18_and_friends
+FROM friend_requests
+WHERE status = 'approved'
+  AND (initiator_user_id = 18 OR target_user_id = 18)
+UNION
+SELECT target_user_id
+FROM friend_requests
+WHERE status = 'approved'
+  AND (initiator_user_id = 18 OR target_user_id = 18);
+
+SELECT *
+FROM 18_and_friends;
+
+# удалим шум из сообщений отправки самому себе
+DELETE
 FROM messages
-WHERE to_user_id = 33
-GROUP BY from_user_id
-ORDER BY messages DESC
+where from_user_id = to_user_id;
+
+# преписка с участием 18го и его друзей
+CREATE VIEW 18_and_friends_chat AS
+SELECT *
+FROM messages
+WHERE (from_user_id IN (SELECT * FROM 18_and_friends) AND to_user_id = 18)
+   OR (to_user_id IN (SELECT * FROM 18_and_friends) AND from_user_id = 18)
+ORDER BY from_user_id;
+
+# лучший друг и количество сообщений (ему + от него)
+SELECT best_friend_id, COUNT(*) messages_qty FROM (SELECT from_user_id best_friend_id
+FROM 18_and_friends_chat WHERE from_user_id != 18
+UNION ALL
+SELECT to_user_id
+FROM 18_and_friends_chat WHERE to_user_id != 18) AS 18_chat
+GROUP BY best_friend_id
 LIMIT 1;
 
+
 # 2.Подсчитать общее количество лайков, которые получили пользователи младше 10 лет.
-SELECT COUNT(*) AS users_below_10_received_likes FROM likes WHERE media_id IN (SELECT id
-FROM media
-WHERE user_id IN (SELECT user_id
-                  FROM profiles
-                  WHERE TIMESTAMPDIFF(YEAR, birthday, NOW()) < 10));
+SELECT COUNT(*) AS users_below_10_received_likes
+FROM likes
+WHERE media_id IN (SELECT id
+                   FROM media
+                   WHERE user_id IN (SELECT user_id
+                                     FROM profiles
+                                     WHERE TIMESTAMPDIFF(YEAR, birthday, NOW()) < 10));
 
 
 # Подсчитать общее количество лайков, которые поставили пользователи младше 10 лет.
