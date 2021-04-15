@@ -1,0 +1,21 @@
+Презентация.pptx
+https://d2xzmw6cctk25h.cloudfront.net/asset/1484178/attachment/7b0a95bdc15f9ca3b52bdacc10718de1.pptx
+
+Практическое задание
+https://docs.google.com/document/d/1B7QId3ePJMmygsr8wTPZz0Tzh4uX_JyjbVY3xZC6ePo/edit#heading=h.gllixcz6t7s7
+
+Методичка 6. Транзакции, переменные, представления
+https://docs.google.com/document/d/1T1nFhvp15JOsIYck0iYfRz_YRgZVF8O52q5UbTDr3mE/edit#
+ИК Базы данных. Урок 6.
+https://d2xzmw6cctk25h.cloudfront.net/asset/1484178/attachment/7b0a95bdc15f9ca3b52bdacc10718de1.pptx
+
+Методичка 7. Администрирование MySQL
+https://docs.google.com/document/d/1HyS74SgaPV5IC0VKdRXkIi9JlDTb97Kh0c7Ln0QHjiY/edit#
+ИК Базы данных. Урок 7. Презентация..pptx
+https://d2xzmw6cctk25h.cloudfront.net/asset/1484182/attachment/ed6fc8dfc0748d6ae1e50a0242d23b11.pptx
+
+Методичка 8. Хранимые процедуры и функции, триггеры
+https://docs.google.com/document/d/1YtUeOkfXpYgy-33eAhsoIYxcXhISGFirHP5q9XBnnPI/edit#
+ИК Базы данных. Урок 8. Презентация..pptx
+https://d2xzmw6cctk25h.cloudfront.net/asset/1484191/attachment/ac1e71fe7e23e727aec26013ccf88531.pptx
+
