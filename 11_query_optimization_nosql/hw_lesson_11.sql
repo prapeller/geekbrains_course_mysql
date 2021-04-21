@@ -57,10 +57,7 @@ values ('zhelezyaka', 'description', 0, 1);
 insert into catalogs (name)
 values ('best catalog');
 
-
-select last_insert_id();
-select *
-from catalogs;
+select * from logs;
 
 # 2) Создайте SQL-запрос, который помещает в таблицу users миллион записей.
 
