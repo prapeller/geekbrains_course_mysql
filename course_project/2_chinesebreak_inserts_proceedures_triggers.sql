@@ -676,7 +676,7 @@ values
 #     (6, 'sent_image')
 #        你不是俄国人。 nǐ bù shì éguó rén
     (3, 6, 1, default, 1, default
-    ,'{"words_id": [3, 10, 5, 7, 9, 45], "grammar_id_active": [3], "words_id_active_or_to_del": [10, 5]}'
+    ,'{"words_id": [3, 10, 5, 7, 9, 44], "grammar_id_active": [3], "words_id_active_or_to_del": [10, 5]}'
     ,'{"sent_lang_A": ["Ты не русский."], "sent_lit_A": ["ты не есть русская страна человек"]}'
     , null
     ,'{"sent_images_id": [119, 120, 121, 122], "sent_images_id_right": [119], "sent_audio_A_id": [124]}')
@@ -685,7 +685,7 @@ values
 #     (7, 'sent_char_from_lang')
 #        你是张伟。 nǐ shì zhāng wěi
     (4, 7, 1, default, 1, default
-    ,'{"words_id": [1, 5, 47, 45], "grammar_id_active": [2], "words_id_active_or_to_del": [1, 5]}'
+    ,'{"words_id": [3, 5, 46, 44], "grammar_id_active": [2], "words_id_active_or_to_del": [3, 5]}'
     ,'{"sent_lang_A": ["Ты - Чжан Вэй."], "sent_lit_A": ["ты есть Чжан Вэй"]}'
     ,'{"sent_char": ["我是张伟。", "你好，张伟。", "再见，张伟。"], "sent_pinyin": ["wǒ shì zhāng wēi", "nǐ hǎo zhāng wěi", "zàijiàn zhāng wěi"]}'
     ,'{"sent_audio_A_id": [125]}')
@@ -703,7 +703,7 @@ values
     #     (9, 'sent_lang_from_video')
 #        你是张伟。 nǐ shì zhāng wěi
     (5, 9, 1, default, 1, default
-    ,'{"words_id": [1, 5, 47, 45], "grammar_id_active": [2], "words_id_active_or_to_del": [1, 5]}'
+    ,'{"words_id": [3, 5, 46, 44], "grammar_id_active": [2], "words_id_active_or_to_del": [3, 5]}'
     ,'{"sent_lang_A": ["Ты - Чжан Вэй."], "sent_lit_A": ["ты есть Чжан Вэй"]}'
     ,'{"sent_lang": ["Я - Чжан Вэй.", "Привет, Чжан Вэй!"]}'
     ,'{"sent_video_id": [131]}')
@@ -721,7 +721,7 @@ values
     #     (11, 'sent_say_from_video')
 #        你是张伟。 nǐ shì zhāng wěi
     (6, 11, 1, default, 1, default
-    ,'{"words_id": [1, 5, 47, 45], "grammar_id_active": [2], "words_id_active_or_to_del": [1, 5], "words_id_to_display": [1, 5, 47]}'
+    ,'{"words_id": [3, 5, 46, 44], "grammar_id_active": [2], "words_id_active_or_to_del": [3, 5], "words_id_to_display": [1, 5, 47]}'
     ,'{"sent_lang_A": ["Ты - Чжан Вэй."], "sent_lit_A": ["ты есть Чжан Вэй"]}'
     , null
     ,'{"sent_video_id": [131], "sent_audio_A_id": [125]}')
@@ -1008,3 +1008,63 @@ call insert_into_user_progress_words(3, 9);
 call insert_into_user_progress_words(3, 10);
 call insert_into_user_progress_words(3, 11);
 call insert_into_user_progress_words(3, 12);
+
+# какоето подобие наличия работы службы поддержки...
+INSERT INTO `messages` (type, from_id, to_id, theme, body, file, is_checked)
+VALUES ('user_admin', 1, 1, 'Est vel rerum earum est modi.',
+        'Vel sint expedita animi accusantium voluptatem et. Dolores atque tenetur et asperiores voluptatem laboriosam. Animi provident asperiores ut non voluptatem tempore quia est.',
+        NULL, '\0'),
+       ('user_admin', 2, 2, 'Laboriosam nulla eum est architecto et libero delectus dolorem.',
+        'Sit eveniet harum qui sed quam. Omnis at impedit tempore inventore doloremque. Quis quia eaque ad. Ratione eos veniam consequatur in facilis sit.',
+        NULL, '\0'),
+       ('user_admin', 3, 3, 'Tenetur autem deserunt enim aperiam.',
+        'Illo ab ipsum at quas. Rerum omnis minus ut voluptas. Aliquam dolorem veritatis aut.', NULL, '\0'),
+       ('user_admin', 1, 1, 'Qui commodi inventore quisquam quia odit.',
+        'A rerum suscipit esse ipsa magni et ut. Consequatur nostrum sunt optio explicabo illo quas. Aut velit eos fuga ullam et.',
+        NULL, '\0'),
+       ('user_admin', 2, 2, 'Distinctio repudiandae molestiae minus beatae corrupti non velit.',
+        'Voluptate odit quidem eligendi quaerat reprehenderit in. Sed quaerat consequatur aut pariatur et. Quisquam voluptatibus dolorem accusantium non aut minus. Aut deserunt iusto quis quo.',
+        NULL, '\0'),
+       ('user_admin', 3, 3, 'Officia ut non eos quisquam molestias explicabo.',
+        'Expedita expedita exercitationem mollitia dolor voluptatum. Quo incidunt magnam quibusdam ab tempora excepturi eaque. Quia qui et unde repellendus minima.',
+        NULL, '\0'),
+       ('user_admin', 1, 1, 'Atque excepturi nihil quos veritatis.',
+        'Expedita earum qui dolorum illum. Repellat corrupti odio soluta quo. A id voluptatibus ab delectus nihil incidunt pariatur.',
+        NULL, '\0'),
+       ('user_admin', 2, 2, 'Aliquam qui corrupti quae quidem.',
+        'Fugit molestias cum omnis similique nobis. Nesciunt nostrum ipsam id dignissimos minima a ut. Sunt cupiditate itaque sunt.',
+        NULL, '\0'),
+       ('user_admin', 3, 3, 'Maxime provident rem optio asperiores quae vel.',
+        'Aut suscipit ab vero voluptas. Iusto non in fuga harum fugit temporibus cum. Quos ipsam reprehenderit ut tempore suscipit. Vitae rerum eos in ut qui.',
+        NULL, ''),
+       ('user_admin', 1, 1, 'Dolores cupiditate illo est est quidem id qui.',
+        'Accusamus et amet ut sit omnis. Maxime iusto repellendus dolor id soluta et cumque. Rerum sunt perferendis ipsa voluptatem aut iste sapiente.',
+        NULL, ''),
+       ('admin_user', 1, 1, 'Earum sed dolorem quasi recusandae explicabo qui.',
+        'Blanditiis modi quasi voluptatem aut. Ab magnam optio qui magni sequi. Aut error blanditiis quae enim voluptates temporibus sunt.',
+        NULL, '\0'),
+       ('admin_user', 2, 2, 'Autem recusandae sint dolore laboriosam eos.',
+        'Sit perspiciatis asperiores nesciunt. Ea quaerat ab deleniti aut ipsum cumque. Illo repudiandae qui aspernatur omnis est magnam omnis. Nihil consequatur qui quis voluptates excepturi pariatur.',
+        NULL, '\0'),
+       ('admin_user', 3, 3, 'Ipsam doloremque quam nesciunt a quia provident.',
+        'Inventore molestias error velit inventore et. In molestiae reprehenderit tempore qui dolores. Dicta labore iure nisi vero.',
+        NULL, ''),
+       ('admin_user', 1, 1, 'Eligendi facilis distinctio quia praesentium enim rerum molestiae sed.',
+        'Quisquam incidunt ad voluptatem maiores. Corporis et repudiandae laborum eius et voluptatem.', NULL, '\0'),
+       ('admin_user', 2, 2, 'Eum id qui sed illo consequatur perferendis.',
+        'Cumque a id voluptas saepe odit. Ab eos earum ipsum necessitatibus rem. Est iusto nostrum praesentium accusamus. Vero itaque vero est est ratione.',
+        NULL, '\0'),
+       ('admin_user', 3, 3, 'Nostrum officia eveniet occaecati doloremque.',
+        'Corporis explicabo beatae iusto ullam distinctio. Saepe aliquam possimus tenetur tenetur. Distinctio est aliquam velit cumque. Maxime at tempore aut rem.',
+        NULL, ''),
+       ('admin_user', 1, 1, 'Dignissimos dolores deserunt natus modi quis.',
+        'Ab quam tenetur perferendis vel esse. Et quidem optio hic nisi quas cum voluptatem. Deserunt dolores laborum cupiditate odit totam.',
+        NULL, ''),
+       ('admin_user', 2, 2, 'Id molestias ea itaque nesciunt est.',
+        'Totam sint vero quasi occaecati tempore. Consequatur molestias vitae minus blanditiis omnis.', NULL, ''),
+       ('admin_user', 3, 3, 'Perspiciatis dolorum quaerat ratione vel quod.',
+        'Magnam a qui est qui illo et libero. Quia nemo non dolorem deserunt rerum et. Dignissimos ab culpa qui.', NULL,
+        '\0'),
+       ('admin_user', 1, 1, 'Officiis ea quis ducimus eum consequuntur magnam.',
+        'Quibusdam voluptate ut consectetur quos totam magnam deserunt. Et suscipit qui non eveniet excepturi laboriosam.',
+        NULL, '\0');

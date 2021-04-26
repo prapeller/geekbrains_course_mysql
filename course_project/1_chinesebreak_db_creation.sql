@@ -400,6 +400,6 @@ create table users_daily_goals
     goal_is_reached bit                       default 0,
     goal_date       datetime                  default now(),
     strike_qty      bigint unsigned  not null comment 'страйк - количетсво достигший цель дней подряд - 1. например, если пользователь 2 дня подряд достигает свою ежедневную цель по баллам - у него 1 страйк, если 3 дня подряд - 2 страйка',
-    constraint users_daily_goals_user_id foreign key (user_id) references user (id)
+    constraint users_daily_goals_user_id foreign key (user_id) references user (id) on delete no action on update cascade
 
 ) comment 'пользователь выставляет ежедневную цель по баллам, набирает их в зависимости от количества срабатываний счетчика count_right в элементах';
